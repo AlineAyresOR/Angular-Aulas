@@ -2,6 +2,7 @@ import { Novatransferencia } from './nova-transferencia/nova-transferencia.compo
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { from } from 'rxjs';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ registerLocaleData(localePt, 'pt');
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
+
 
   ],
   providers: [
