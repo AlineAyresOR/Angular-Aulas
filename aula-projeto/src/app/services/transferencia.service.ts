@@ -23,9 +23,9 @@ todas():Observable<Transferencia[]>{
   return this.httpClient.get<Transferencia[]>(this.ApiUrl);
 }
 
-adicionar(transferencia:any){
+adicionar(transferencia:Transferencia):Observable<Transferencia>{
   this.hidratar(transferencia);
-  this.listatransferencia.push(transferencia);
+  return this.httpClient.post<Transferencia>(this.ApiUrl,transferencia);
 }
 
 private hidratar(transferencia: any){

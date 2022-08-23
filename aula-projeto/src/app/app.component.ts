@@ -11,8 +11,4 @@ export class AppComponent {
   title = 'aula-projeto';
 
  constructor (private service: TransferenciaService) {}
-
-  transferir($event){
-    this.service.adicionar($event);
-  }
 }
